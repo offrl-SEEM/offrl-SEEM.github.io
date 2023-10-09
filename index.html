@@ -253,7 +253,7 @@
     <div class="column is-full-width">
       <div class="content has-text-justified">
         <p> 
-    Q-value divergence happens when the maximal eigenvalue of the following matrix \(A_t\) is greater to 0:
+    In our paper, we theoretically prove that Q-value divergence happens when <b>the maximal eigenvalue of the following matrix \(A_t\) (namely SEEM)</b> is greater to 0:
 		<figure style="text-align: center;">
           <img id="teaser" width="60%" src="images/seem_eqn.jpg">  
       </figure>
@@ -263,7 +263,7 @@
     </p><p>
         <b>The intuitive interpretation for SEEM is as below: </b>
            If SEEM is positive, the generalization bond between \(Q_\theta(X)\) and \(Q_\theta(X^*_t)\) is strong. 
-          When updating the value of \(Q_\theta(X)\) towards \(r+\gamma Q_\theta(X^*)\), the Q-value iteration inadvertently makes \(Q_\theta(X^*)\) increase even more than the increment of fθt+1 \(Q_\theta(X)\).
+          When updating the value of \(Q_\theta(X)\) towards \(r+\gamma Q_\theta(X^*)\), due to strong generalization of the neural network, the Q-value iteration inadvertently makes \(Q_\theta(X^*)\) increase even more than the increment of \(Q_\theta(X)\).
           Consequently, the TD error \(r+\gamma Q_\theta(X^*) - Q_\theta(X)\) expands instead of reducing, due to the target value moving away faster than predicted value, which encourages the above procedure to repeat. 
           This forms a positive feedback loop and causes self-excitation. Such mirage-like property causes the model’s parameter and its prediction value to diverge.
         </p>
@@ -339,7 +339,7 @@
 
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"> <img id="painting_icon" width="3%" src="./images/logo.png"> Reducing SEEM By Normalization</h2>
+      <h2 class="title is-3"> <img id="painting_icon" width="5%" src="./images/logo.png"> Reducing SEEM By Normalization</h2>
       <div class="container is-max-desktop">
       <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
@@ -369,7 +369,7 @@
 
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"> <img id="painting_icon" width="3%" src="./images/logo.png"> Agent Performance</h2>
+      <h2 class="title is-3"> <img id="painting_icon" width="5%" src="./images/logo.png"> Agent Performance</h2>
       <div class="container is-max-desktop">
       <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
